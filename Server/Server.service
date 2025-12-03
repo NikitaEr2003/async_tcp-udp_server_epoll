@@ -1,0 +1,23 @@
+[Unit]
+Description=Asynchronous TCP/UDP Server
+After=network.target
+Documentation=https://github.com/NikitaEr2003/async_tcp-udp_server_epoll
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/Server
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=5s
+User=nobody
+Group=nogroup
+
+# Безопасность
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/var/log
+
+[Install]
+WantedBy=multi-user.target
