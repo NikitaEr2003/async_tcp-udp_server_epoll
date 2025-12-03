@@ -35,12 +35,12 @@ sudo journalctl -u Server -f   # Логи
 ##Структура проекта 
 Server/
 ├── CMakeLists.txt
+├── Makefile
+├── Server_1.0-1_amd64.deb
+├── Server.service
 ├── main.cpp
 ├── server.cpp
 ├── server.h
 ├── threadpool.cpp
 ├── threadpool.h
-├── Server.service
-├── Makefile
-├── Server_1.0-1_amd64.deb
 README.md
